@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+/* Reset & Base Setup */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: radial-gradient(circle at top left, #f0f4f8, #e2e8f0);
+  color: #1e293b;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem 1rem;
+  transition: background 0.6s ease;
+}
+
+/* Main Container */
+.app {
+  width: 100%;
+  max-width: 500px;
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.07);
+  transition: transform 0.4s ease;
+  animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Header */
+header h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #f10b0b;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+/* Form */
+form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  flex-direction: column;
+  transition: all 0.3s ease-in-out;
+}
+
+form input {
+  padding: 0.75rem 1rem;
+  border: 1px solid #d1d5db;
+  background: #f9fafb;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+form input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+  transform: scale(1.01);
+}
+
+form button {
+  padding: 0.75rem;
+  background: linear-gradient(to right, #57f63b, #eb25de);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(to right, #eb6025, #1dd8d5);
+}
+
+/* Task List */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  background: #f1f5f9;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+li:hover {
+  background: #e2e8f0;
+  transform: scale(1.01);
+}
+
+li span {
+  flex: 1;
+  font-size: 1rem;
+  word-break: break-word;
+  color: #1e293b;
+}
+
+li input[type="text"] {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: box-shadow 0.3s ease;
+}
+
+li input[type="text"]:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.4);
+}
+
+/* Button Styling */
+li button {
+  background: transparent;
+  border: none;
+  font-size: 1rem;
+  padding: 0.4rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+li button:hover {
+  background: rgba(203, 213, 225, 0.4);
+  color: #1e3a8a;
+}
+
+/* Responsive Layout */
+@media (min-width: 480px) {
+  form {
+    flex-direction: row;
+  }
+
+  form input {
+    flex: 1;
+  }
+
+  form button {
+    width: auto;
+  }
+}
+
+.header-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.header-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+}
